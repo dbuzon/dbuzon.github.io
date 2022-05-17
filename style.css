@@ -42,11 +42,11 @@ a::after {
     transition: width 300ms;
 }
 
-a:hover {
+a:hover, a:focus {
     color: var(--light-color);
 }
 
-a:hover::after {
+a:hover::after, a:focus::after {
     width: 100%;
 }
 
