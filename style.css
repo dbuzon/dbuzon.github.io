@@ -4,9 +4,9 @@
 }
 
 :root {
-    --light-color: hsl(0, 0%, 100%);
+    --light-color: hsl(0, 0%, 88%);
     --dark-color: hsl(225, 6%, 12%);
-    --accent-color: hsl(226, 20%, 75%);
+    --accent-color: hsl(335, 100%, 82%);
     --primary-font: 'Inter', sans-serif;    
     font-size: calc(10px + 0.33vw)
 }
@@ -48,10 +48,12 @@ a:hover::after, a:focus::after {
 h1 {
     font-size: 3.5rem;
     margin: 30px 0;
+    color: #fff;
 }
 
 h2 {
     font-size: 2rem;
+    color: #fff;
 }
 
 p {
