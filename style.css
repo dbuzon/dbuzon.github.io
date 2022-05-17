@@ -30,7 +30,6 @@ a {
     text-decoration: none;
     cursor: pointer;
     color: var(--accent-color);
-    transition: color ease-in 200ms;
 }
 
 a::after {
@@ -38,12 +37,8 @@ a::after {
     display: block;
     width: 0;
     height: 1px;
-    background: var(--light-color);    
+    background: var(--accent-color);    
     transition: width 300ms;
-}
-
-a:hover, a:focus {
-    color: var(--light-color);
 }
 
 a:hover::after, a:focus::after {
@@ -64,7 +59,7 @@ p {
     font-size: 1.25rem;
     font-weight: 300;
     letter-spacing: 0.015rem;
-    line-height: 1.75rem;
+    line-height: 1.8rem;
 }
 
 span {
