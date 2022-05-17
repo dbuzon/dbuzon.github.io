@@ -73,7 +73,14 @@ span {
 
 .wrapper {
     max-width: 600px;
+    margin: 0 5vh;
 }
 
-
-
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+    span {
+        font-size: 1.8rem;
+    }
+}
