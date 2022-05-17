@@ -4,9 +4,9 @@
 }
 
 :root {
-    --light-color: #fff;
-    --dark-color: #222326;
-    --accent-color: #A6ACBF;
+    --light-color: hsl(0, 0%, 100%);
+    --dark-color: hsl(225, 6%, 12%);
+    --accent-color: hsl(226, 20%, 75%);
     --primary-font: 'Inter', sans-serif;    
     font-size: calc(10px + 0.33vw)
 }
@@ -26,14 +26,28 @@ body {
 }
 
 a {
+    display: inline-block;
     text-decoration: none;
     cursor: pointer;
     color: var(--accent-color);
     transition: color ease-in 200ms;
 }
 
+a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--light-color);    
+    transition: width 300ms;
+}
+
 a:hover {
     color: var(--light-color);
+}
+
+a:hover::after {
+    width: 100%;
 }
 
 h1 {
