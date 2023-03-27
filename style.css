@@ -4,11 +4,12 @@
 }
 
 :root {
-    --light-color: hsl(0, 0%, 90%);
-    --dark-color: hsl(225, 6%, 12%);
-    --accent-color: hsl(335, 100%, 82%);
-    --primary-font: 'Inter', sans-serif;    
-    font-size: calc(10px + 0.33vw)
+    --light-color: hsl(0, 0%, 100%);
+    --dark-color: hsl(216, 12%, 8%);
+    --accent-color: hsl(340, 100%, 83%);
+    --title-font: 'Montserrat', sans-serif; 
+    --mono-font: 'Roboto Mono', monospace;  
+    font-size: calc(14px + 0.6vw);
 }
 
 html {
@@ -22,74 +23,49 @@ body {
     align-items: center;
     background-color: var(--dark-color);
     color: var(--light-color);
-    font-family: var(--primary-font);
+    font-family: var(--mono-font);
+    text-align: center;
 }
 
 a {
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
-    color: var(--accent-color);
+    margin: 0 10px;
+    transition: 200ms;
 }
 
-a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 1px;
-    background: var(--accent-color);    
-    transition: width 300ms;
+a:hover {
+    filter: drop-shadow(0 0 0.25rem var(--accent-color));
 }
 
-a:hover::after, a:focus::after {
-    width: 100%;
-}
-
-h1 {
-    font-size: 3.5rem;
-    margin: 1.8rem 0;
-    color: #fff;
-}
-
-h2 {
-    font-size: 2rem;
-    color: #fff;
+a > img {
+    width: 2rem;
+    height: 2rem;
 }
 
 p {
-    margin: 10px 0;
-    font-size: 1.25rem;
-    font-weight: 300;
-    letter-spacing: 0.015rem;
-    line-height: 1.8rem;
-}
-
-span {
-    font-size: 2.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    max-width: 400px;
 }
 
 .wrapper {
-    max-width: 600px;
-    margin: 0 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
 }
 
-@media (max-width: 600px) {
-    h1 {
-        font-size: 3rem;
-    }
-    span {
-        font-size: 2rem;
-    }
+.title {
+    font-size: min(calc(30px + 3.4vw),70px);
+    font-family: var(--title-font);
+    color: var(--accent-color);
+    margin: 20px 0;
 }
 
-@media (max-width: 300px) {
-    h1 {
-        font-size: 2.25rem;
-    }
-    span {
-        font-size: 1.75rem;
-    }
-    h2 {
-        font-size: 1.75rem;
-    }
+.links {
+    margin: 40px 0;
 }
+
