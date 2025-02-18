@@ -3,7 +3,7 @@ const typedTag = document.getElementById("effect");
 const insertSpan = document.querySelector(".insert");
 const speed = 200;
 let charIndex = 0;
-console.log(typedTag, insertSpan)
+
 function typeWriter() {
     if (charIndex < txt.length) {
         if(!insertSpan.classList.contains("typing")) {insertSpan.classList.add("typing");}
